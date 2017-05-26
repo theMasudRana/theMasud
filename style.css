@@ -173,6 +173,10 @@ mark {
     right: 0;
     top: 50%;
     width: 20px;
+    transition: .3s;
+}
+.menu-trigger.active span {
+
 }
 .menu-trigger span::before,
 .menu-trigger span::after {
@@ -189,10 +193,17 @@ mark {
 	top: 5px;
 }
 .menu-trigger.active span::before {
-  top: calc(50% - 2px);
-  transform: rotate(90deg) translateY(-50%);
+  top: calc(50% - 1px);
+  transform: rotate(45deg);
+  transform-origin: 50% 50% 0;
 }
 .menu-trigger.active span::after {
-	top: 0;
+  top: calc(50% - 1px);
+  transform: rotate(-45deg);
+  transform-origin: 50% 50% 0;
 }
 
+/*Service section */
+.template-section {
+  padding: 110px 0;
+}
