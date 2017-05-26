@@ -188,9 +188,6 @@ mark {
 .menu-trigger span::after {
 	top: 5px;
 }
-.menu-trigger.active {
-  
-}
 .menu-trigger.active span::before {
   top: calc(50% - 2px);
   transform: rotate(90deg) translateY(-50%);
