@@ -2,7 +2,8 @@
 	'use strict';
 
 	$('#menu-trigger-id').on('click', function(e) {
-		$(this).toggleClass('active');
+		var $this = $(this);
+		$this.toggleClass('active');
 		e.preventDefault();
 	});
 

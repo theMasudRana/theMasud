@@ -196,5 +196,6 @@ mark {
   transform: rotate(90deg) translateY(-50%);
 }
 .menu-trigger.active span::after {
-	opacity: 0;
+	top: 0;
 }
+
