@@ -53,11 +53,11 @@ h3 a,
 h4 a,
 h5 a,
 h6 a { 
-    color: inherit;
+   color: inherit;
 }
 h1 {
-    font-size: 40px;
-    font-weight: 500;
+	font-size: 40px;
+	font-weight: 500;
 }
 h2 {
     font-size: 35px;
