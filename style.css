@@ -242,3 +242,75 @@ mark {
   text-transform: capitalize;
 }
 /*Block image*/
+/*--------------------------------------------------------
+  10. PROGRESS BAR STYLE
+---------------------------------------------------------*/
+.single-skill-bar {
+    overflow: hidden;
+    padding: 10px 0 0;
+}
+.progress {
+    background: #e5e5e5 none repeat scroll 0 0;
+    border-radius: 0;
+    box-shadow: none;
+    font-weight: 400;
+    height: 2px;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    margin-top: 0;
+    overflow: visible;
+    text-transform: uppercase;
+}
+.gray-bg .progress {
+    background: #ddd none repeat scroll 0 0;
+}
+.progress-bar {
+    background: #222 none repeat scroll 0 0;
+    box-sizing: border-box;
+    color: #000;
+    font-size: 11px;
+    overflow: visible;
+    padding-top: 2px;
+    position: relative;
+    text-align: left;
+}
+.single-skill-bar > p {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 1px;
+    line-height: 1;
+    margin: 0 0 8px;
+    text-transform: uppercase;
+}
+.progress-bar span {
+    background: #f0b775 none repeat scroll 0 0;
+    border-radius: 4px 4px 0 2px;
+    bottom: 10px;
+    color: #fff;
+    display: inline-block;
+    height: 25px;
+    letter-spacing: 0;
+    line-height: 25px;
+    min-width: 25px;
+    padding: 0 5px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+}
+.progress-bar span::before {
+    border-color: transparent #f0b775 transparent transparent;
+    border-style: solid;
+    border-width: 0 5px 7px 0;
+    content: "";
+    height: 0;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 0;
+}
+.skill-content {
+    padding: 140px 0 140px 60px;
+}
+.single-progress-bar {
+  overflow: hidden;
+}
