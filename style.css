@@ -314,3 +314,10 @@ mark {
 .single-progress-bar {
   overflow: hidden;
 }
+.single-progress-bar > p {
+  line-height: 1.2;
+  margin: 0 0 15px;
+}
+.mt-100 {
+  margin-top: 100px;
+}
