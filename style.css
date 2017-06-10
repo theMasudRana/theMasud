@@ -1,10 +1,19 @@
 /* -----------------------------
-Template Name: theMasud
-Author: Masud Rana 
+Template Name: Template name
+Author: Authore Name
 ------------------------------- */
-/*CSS Table of content*/
+/* -----------------------------------
+CSS Table of content
+--------------------------------------
+1. Template default styles
+2. Button style
+3. Header area style
+--------------------------------------*/
 
-/*Template default styles*/
+
+/* -----------------------------
+1. Template default styles
+--------------------------------*/
 @import 'https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800|Open+Sans:300,400,600,700';
 body {
   font-family: 'Open Sans', sans-serif;
@@ -14,29 +23,29 @@ body {
   line-height: 24px;
 }
 .img{
-    max-width: 100%;
-    transition: all 0.3s ease-in-out 0s;
+  max-width: 100%;
+  transition: all 0.3s ease-in-out 0s;
 }
 a{
-    -webkit-transition: all 0.3s ease-in-out 0s;
-    -moz-transition: all 0.3s ease-in-out 0s;
-    -ms-transition: all 0.3s ease-in-out 0s;
-    -o-transition: all 0.3s ease-in-out 0s;
-    transition: all 0.3s ease-in-out 0s;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  -ms-transition: all 0.3s ease-in-out 0s;
+  -o-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
 }
 a:focus {
-    text-decoration: none;
-    outline: none;
+  text-decoration: none;
+  outline: none;
 }
 a:hover {
-    color: #888888;
-    text-decoration: none;
+  color: #888888;
+  text-decoration: none;
 }
 .uppercase { 
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 .capitalize { 
-    text-transform: capitalize;
+  text-transform: capitalize;
 }
 h1, h2, h3, h4, h5, h6 {
   color: #232332;
@@ -118,206 +127,37 @@ label {
   color: #555555;
   font-size: 14px;
 }
-.mark, 
-mark {
-    background: #4fc1f0 none repeat scroll 0 0;
-    color: #ffffff;
-}
-.tooltip-content {
-  color: #00a9da;
-  cursor: help;
-  font-weight: 600;
+.mark {
+  background: #4fc1f0 none repeat scroll 0 0;
+  color: #ffffff;
 }
 .container {
   width: 1200px;
 }
 
-/*Button style*/
-.text-link {
-  color: #333;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-
-
-
-
-
-
-
-
-/*Header area style*/
-.header-area {
-  border-bottom: 1px solid #eee;
-  height: 80px;
-}
-.logo-wrapper {
-  line-height: 80px;
-  padding: 0;
-}
-.logo {
-  color: #252525;
+/* ------------------------------
+2. Button style
+---------------------------------*/
+.button {
+  background: transparent none repeat scroll 0 0;
+  border: 1px solid #e5e5e5;
+  color: #232323;
   display: inline-block;
   font-family: "Montserrat",sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 1;
+  font-size: 12px;
+  font-weight: 400;
+  height: 45px;
+  letter-spacing: 1px;
+  line-height: 42px;
+  padding: 0 30px;
+  text-transform: uppercase;
 }
-/*Menu trigger*/
-
-.menu-trigger-area {
-    position: relative;
-    text-align: right;
-    line-height: 80px;
-}
-.menu-trigger {
-  display: inline-block;
-  height: 15px;
-  width: 20px;
-}
-.menu-trigger span {
-    background: #252525 none repeat scroll 0 0;
-    height: 1px;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    width: 20px;
-    transition: .3s;
-}
-.menu-trigger.active span {
-
-}
-.menu-trigger span::before,
-.menu-trigger span::after {
-  background: #252525 none repeat scroll 0 0;
-  content: "";
-  height: 1px;
-  position: absolute;
-  right: 0;
-  top: -5px;
-  width: 20px;
-  transition: .3s ease-in-out 0s;
-}
-.menu-trigger span::after {
-	top: 5px;
-}
-.menu-trigger.active span::before {
-  top: calc(50% - 1px);
-  transform: rotate(45deg);
-  transform-origin: 50% 50% 0;
-}
-.menu-trigger.active span::after {
-  top: calc(50% - 1px);
-  transform: rotate(-45deg);
-  transform-origin: 50% 50% 0;
+.button:hover {
+  background: #333;
+  color: #fff;
+  border: 1px solid transparent;
 }
 
-/*Service section */
-.template-section {
-  padding: 110px 0;
-}
-
-.single-service {
-  overflow: hidden;
-}
-.service-icon {
-  float: left;
-  width: 40px;
-}
-.service-content {
-  float: left;
-  padding-left: 20px;
-  width: calc(100% - 40px);
-}
-.service-icon i {
-  font-size: 30px;
-  padding-left: 1px;
-}
-.service-content h2 {
-  font-size: 20px;
-  font-weight: 700;
-  text-transform: capitalize;
-}
-/*Block image*/
-/*--------------------------------------------------------
-  10. PROGRESS BAR STYLE
----------------------------------------------------------*/
-.single-skill-bar {
-    overflow: hidden;
-    padding: 10px 0 0;
-}
-.progress {
-    background: #e5e5e5 none repeat scroll 0 0;
-    border-radius: 0;
-    box-shadow: none;
-    font-weight: 400;
-    height: 2px;
-    letter-spacing: 1px;
-    margin-bottom: 25px;
-    margin-top: 0;
-    overflow: visible;
-    text-transform: uppercase;
-}
-.gray-bg .progress {
-    background: #ddd none repeat scroll 0 0;
-}
-.progress-bar {
-    background: #222 none repeat scroll 0 0;
-    box-sizing: border-box;
-    color: #000;
-    font-size: 11px;
-    overflow: visible;
-    padding-top: 2px;
-    position: relative;
-    text-align: left;
-}
-.single-skill-bar > p {
-    display: inline-block;
-    font-size: 12px;
-    letter-spacing: 1px;
-    line-height: 1;
-    margin: 0 0 8px;
-    text-transform: uppercase;
-}
-.progress-bar span {
-    background: #f0b775 none repeat scroll 0 0;
-    border-radius: 4px 4px 0 2px;
-    bottom: 10px;
-    color: #fff;
-    display: inline-block;
-    height: 25px;
-    letter-spacing: 0;
-    line-height: 25px;
-    min-width: 25px;
-    padding: 0 5px;
-    position: absolute;
-    right: 0;
-    text-align: center;
-}
-.progress-bar span::before {
-    border-color: transparent #f0b775 transparent transparent;
-    border-style: solid;
-    border-width: 0 5px 7px 0;
-    content: "";
-    height: 0;
-    position: absolute;
-    right: 0;
-    top: 100%;
-    width: 0;
-}
-.skill-content {
-    padding: 140px 0 140px 60px;
-}
-.single-progress-bar {
-  overflow: hidden;
-}
-.single-progress-bar > p {
-  line-height: 1.2;
-  margin: 0 0 15px;
-}
-.mt-100 {
-  margin-top: 100px;
-}
+/* -----------------------------
+3. Header area style
+-------------------------------- */
