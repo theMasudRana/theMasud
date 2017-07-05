@@ -41,18 +41,55 @@
         /*--------------------------------------------------
         LOAD MORE BUTTON FOR PORTFOLIO
         ---------------------------------------------------*/
-        $('.pagination-area').on('click', '.lode-more', function(event) {
+        $('.pagination-area').on('click', '.load-more', function(event) {
             $('.portfolio-item').removeClass('hidden');
             var $grid = $('.portfolio-grid').isotope();
             $(this).hide();
-            $('.pagination-area .load-more').append('<a class="button" href="javascript:void(0)">No More Items</a>')
+            $('.pagination-area .load-more-wrapper').append('<a class="button" href="javascript:void(0)">No More Items</a>')
             event.preventDefault();
         });
     });
 
 
 
+    /*------------------------------------------------
+     Magnificpopup for video gallery section
+    -------------------------------------------------- */
+    $('.vendorx-gallery-single-image').magnificPopup({
+        type: 'image',
+        removalDelay: 300,
+        mainClass: 'mfp-fade',
+    });
 
+    /*------------------------------------------------
+     Magnificpopup for video gallery section
+    -------------------------------------------------- */
+    $('.vendorx-gallery').magnificPopup({
+        type: 'image',
+        removalDelay: 300,
+        mainClass: 'mfp-no-margins mfp-with-zoom',
+        gallery: {
+            enabled: true,
+        },
+        image: {
+            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+            titleSrc: function(item) {
+                return item.el.attr('data-title');
+            }
+        }
+    });
+
+    /*------------------------------------------------
+     Magnificpopup for video gallery section
+    -------------------------------------------------- */
+    $('.portfolio-video-icon, .video-play-icon').magnificPopup({
+        disableOn: 700,
+        type: "iframe",
+        mainClass: "mfp-fade",
+        removalDelay: 160,
+        preloader: false,
+        fixedContentPos: false
+    });
 
 
 
