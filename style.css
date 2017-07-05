@@ -321,3 +321,242 @@ mark {
 .mt-100 {
   margin-top: 100px;
 }
+.skill-bar-area {
+  margin-top: 150px;
+}
+.block-image img {
+  float: right;
+  margin-top: 60px;
+  width: 65%;
+}
+
+/*Portfolio area*/
+.portfolio-column-count-3 .portfolio-item {
+  width: 33.3333333333%;
+}
+.portfolio-column-count-3 .portfolio-item-big {
+  width: 66.6666666666%;
+}
+.portfolio-column-count-2 .portfolio-item {
+  width: 50%;
+}
+.portfolio-column-count-2 .portfolio-item-big {
+  width: 100%;
+}
+.portfolio-column-count-4 .portfolio-item {
+  width: 25%;
+}
+.portfolio-column-count-4 .portfolio-item-big {
+  width: 50%;
+}
+.portfolio-gutter {
+  margin: 0 -10px;
+}
+.portfolio-full-width .portfolio-gutter {
+  margin: 0;
+}
+.portfolio-gutter .portfolio-item {
+  padding: 0 10px;
+  margin-bottom: 20px;
+}
+.portfolio-full-width .row {
+  margin: 0;
+}
+.portfolio-no-gutter .portfolio-grid {
+  margin-bottom: 80px;
+}
+/*Portfolio filter*/
+
+.portfolio-filter > li {
+  display: inline-block;
+  margin: 0 3px;
+}
+.portfolio-filter > li a {
+    background: #f6f6f6 none repeat scroll 0 0;
+    border-radius: 100px;
+    color: #333;
+    display: block;
+    font-family: "Montserrat",sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    height: 30px;
+    letter-spacing: 1.5px;
+    line-height: 30px;
+    padding: 0 20px;
+}
+.portfolio-filter-wrap {
+    margin-bottom: 30px;
+}
+.portfolio-filter > li.active a,
+.portfolio-filter > li a:hover {
+  background: #ffce3e none repeat scroll 0 0;
+  color: #fff;
+}
+/*Portfolio fileter style 2*/
+.portfolio-filter.portfolio-filter-style-2 > li {
+  border: 1px solid #e5e5e5;
+  border-right: 1px solid transparent;
+  margin: 0 -3px;
+}
+.portfolio-filter.portfolio-filter-style-2 a {
+  background: transparent none repeat scroll 0 0;
+  border-radius: 0;
+  color: #999;
+  font-weight: 400;
+  height: 40px;
+  line-height: 40px;
+}
+.portfolio-filter.portfolio-filter-style-2 > li:last-child {
+  border-radius: 0 3px 3px 0;
+  border-right: 1px solid #e5e5e5;
+}
+.portfolio-filter.portfolio-filter-style-2 > li:first-child {
+  border-radius: 3px 0 0 3px;
+}
+.portfolio-filter.portfolio-filter-style-2 > li.active a, 
+.portfolio-filter.portfolio-filter-style-2 > li a:hover {
+  background: transparent none repeat scroll 0 0;
+  color: #ffce3e;
+}
+
+
+
+
+
+
+/*Portfolio content style*/
+.portfolio-item img {
+  transform: scale3d(1, 1, 1);
+  transition: all 400ms ease 0s;
+  width: 100%;
+}
+.portfolio-item:hover .portfolio-thumbnail img {
+  transform: scale3d(1.10, 1.10, 1);
+}
+.portfolio-thumbnail {
+  overflow: hidden;
+  position: relative;
+}
+.portfolio-thumbnail::before {
+  background: rgba(0, 0, 0, 0.7) none repeat scroll 0 0;
+  content: "";
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition: all 0.3s ease 0s;
+  width: 100%;
+  z-index: 1;
+}
+.portfolio-item:hover .portfolio-thumbnail::before {
+  opacity: 1;
+}
+.project-action-btn {
+  opacity: 0;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-60%);
+  transition: all 0.3s ease .1s;
+  width: 100%;
+  z-index: 2;
+}
+.portfolio-item:hover .project-action-btn {
+  opacity: 1;
+  transform: translateY(-50%);
+}
+.project-action-btn a {
+    background: #ffce3e none repeat scroll 0 0;
+    border-radius: 100%;
+    color: #fff;
+    display: inline-block;
+    font-size: 20px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    width: 50px;
+}
+.project-action-btn a:hover {
+    background: #fff none repeat scroll 0 0;
+    color: #333;
+}
+.portfolio-content {
+  overflow: hidden;
+  position: relative;
+}
+.portfolio-information {
+  bottom: 0;
+  opacity: 0;
+  padding: 20px;
+  position: absolute;
+  transform: translateY(10px);
+  visibility: hidden;
+  width: 100%;
+  transition: all .3s ease .1s; 
+  z-index: 2;
+}
+.portfolio-information h4 {
+  margin: 0 0 5px;
+  color: #fff;
+}
+.portfolio-item:hover .portfolio-information {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.project-cat > li {
+    display: inline-block;
+    line-height: 1;
+    margin-right: 10px;
+    position: relative;
+}
+.project-cat > li a {
+    color: #fff;
+    display: inline-block;
+    line-height: 1;
+}
+.project-cat > li::before {
+  content: ",";
+  position: absolute;
+  right: -9px;
+}
+.project-cat > li:last-child::before {
+  content: "";
+}
+.project-cat > li:last-child {
+  margin: 0;
+}
+
+.portfolio-information h4 {
+  overflow: hidden;
+}
+.portfolio-information a {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.5s ease-out 0s;
+}
+.portfolio-item:hover .portfolio-information a {
+  transform: translateY(0);
+  opacity: 1;
+}
+.project-cat {
+  overflow: hidden;
+}
+.project-cat li {
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.5s ease-out .2s;
+}
+.project-cat li a:hover {
+  color: #ffce3e;
+}
+.portfolio-item:hover .project-cat li {
+  transform: translateY(0);
+  opacity: 1;
+}
+.pagination-area {
+  margin-top: 30px;
+  padding: 0 15px;
+}
