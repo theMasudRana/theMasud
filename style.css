@@ -154,6 +154,10 @@ mark {
   border-bottom: 1px solid #eee;
   height: 80px;
 }
+.header-area .container-fluid {
+    padding-left: 60px;
+    padding-right: 60px;
+}
 .logo-wrapper {
   line-height: 80px;
   padding: 0;
@@ -166,55 +170,36 @@ mark {
   font-weight: 700;
   line-height: 1;
 }
-/*Menu trigger*/
-
-.menu-trigger-area {
-    position: relative;
-    text-align: right;
-    line-height: 80px;
+.logo > span {
+  font-weight: 100;
+  margin: 0 8px;
 }
-.menu-trigger {
+/*Menu trigger btn*/
+.menu-options-trigger-area {
+  line-height: 80px;
+  text-align: right;
+}
+.hamburger-box {
   display: inline-block;
   height: 15px;
-  width: 20px;
+  position: relative;
+  width: 30px;
 }
-.menu-trigger span {
-    background: #252525 none repeat scroll 0 0;
-    height: 1px;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    width: 20px;
-    transition: .3s;
+.hamburger {
+  overflow: visible;
+  padding: 0;
 }
-.menu-trigger.active span {
-
+.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before {
+  border-radius: 0;
+  height: 2px;
+  width: 25px;
 }
-.menu-trigger span::before,
-.menu-trigger span::after {
-  background: #252525 none repeat scroll 0 0;
-  content: "";
-  height: 1px;
-  position: absolute;
-  right: 0;
-  top: -5px;
-  width: 20px;
-  transition: .3s ease-in-out 0s;
+.hamburger--spring .hamburger-inner::before {
+  top: 6px;
 }
-.menu-trigger span::after {
-	top: 5px;
+.hamburger--spring .hamburger-inner::after {
+  top: 12px;
 }
-.menu-trigger.active span::before {
-  top: calc(50% - 1px);
-  transform: rotate(45deg);
-  transform-origin: 50% 50% 0;
-}
-.menu-trigger.active span::after {
-  top: calc(50% - 1px);
-  transform: rotate(-45deg);
-  transform-origin: 50% 50% 0;
-}
-
 /*Service section */
 .template-section {
   padding: 110px 0;

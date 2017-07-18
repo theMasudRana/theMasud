@@ -91,7 +91,14 @@
         fixedContentPos: false
     });
 
-
+    /* ---------------------------------------------
+     MENU HAMBURGER FOR MENU
+    --------------------------------------------- */
+    $('.hamburger').on('click', function() {
+        $(this).toggleClass('is-active');
+        $(this).next().toggleClass('nav-show')
+    });
+    
 
 
 })(jQuery)
