@@ -131,6 +131,9 @@ mark {
 .container {
   width: 1200px;
 }
+.gray-bg {
+  background: #f6f6f6;
+}
 
 /*Button style*/
 .text-link {
@@ -153,6 +156,9 @@ mark {
 .header-area {
   border-bottom: 1px solid #eee;
   height: 80px;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
 }
 .header-area .container-fluid {
     padding-left: 60px;
@@ -268,7 +274,7 @@ mark {
     text-transform: uppercase;
 }
 .progress-bar span {
-    background: #f0b775 none repeat scroll 0 0;
+    background: #ffce3e none repeat scroll 0 0;
     border-radius: 4px 4px 0 2px;
     bottom: 10px;
     color: #fff;
@@ -283,7 +289,7 @@ mark {
     text-align: center;
 }
 .progress-bar span::before {
-    border-color: transparent #f0b775 transparent transparent;
+    border-color: transparent #ffce3e transparent transparent;
     border-style: solid;
     border-width: 0 5px 7px 0;
     content: "";
@@ -354,20 +360,20 @@ mark {
 
 .portfolio-filter > li {
   display: inline-block;
-  margin: 0 3px;
+  margin: 0 5px;
 }
 .portfolio-filter > li a {
-    background: #f6f6f6 none repeat scroll 0 0;
-    border-radius: 100px;
-    color: #333;
-    display: block;
-    font-family: "Montserrat",sans-serif;
-    font-size: 12px;
-    font-weight: 500;
-    height: 30px;
-    letter-spacing: 1.5px;
-    line-height: 30px;
-    padding: 0 20px;
+  background: #f6f6f6 none repeat scroll 0 0;
+  border-radius: 2px;
+  color: #333;
+  display: block;
+  font-family: "Montserrat",sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  height: 30px;
+  letter-spacing: 1.5px;
+  line-height: 30px;
+  padding: 0 30px;
 }
 .portfolio-filter-wrap {
     margin-bottom: 30px;
