@@ -149,6 +149,37 @@ mark {
 
 
 
+/*Area heading*/
+.area-title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+.area-heading p {
+    margin: 0;
+}
+.area-heading {
+  margin: 0 auto 50px;
+  width: 60%;
+}
+
+.divider i {
+    font-size: 28px;
+}
+.divider {
+    margin-top: 25px;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
