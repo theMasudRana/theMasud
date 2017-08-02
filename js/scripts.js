@@ -15,7 +15,18 @@
     });
     wow.init();
 
-
+     $('.slider-area').slick({
+        dots: true,
+        arrows: false,
+        autoPlay: true,
+        speed: 500,
+        autoPlaySpeed: 3000,
+        infinite: true,
+        fade: true,
+        easing: 'linear',
+        slidesToShow: 1,
+        slidesToScroll: 1
+    });
 
     // Portfolio section 
     $('.portfolio-section').imagesLoaded(function() {
@@ -49,6 +60,9 @@
             event.preventDefault();
         });
     });
+
+    // Counetrup
+    $('.counter').counterUp();
 
 
 
