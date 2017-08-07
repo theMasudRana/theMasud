@@ -64,7 +64,31 @@
     // Counetrup
     $('.counter').counterUp();
 
-
+    /*-------------------------------------------
+      SCROLL TO TOP BUTTON
+    ---------------------------------------------*/
+    $('body').append('<a id="back-to-top" class="to-top-btn" href="#"><i class="fa fa-angle-up"></i></a>');
+    if ($('#back-to-top').length) {
+        var scrollTrigger = 100, // px
+            backToTop = function() {
+                var scrollTop = $(window).scrollTop();
+                if (scrollTop > scrollTrigger) {
+                    $('#back-to-top').addClass('to-top-show');
+                } else {
+                    $('#back-to-top').removeClass('to-top-show');
+                }
+            };
+        backToTop();
+        $(window).on('scroll', function() {
+            backToTop();
+        });
+        $('#back-to-top').on('click', function(e) {
+            e.preventDefault();
+            $('html,body').animate({
+                scrollTop: 0
+            }, 1250);
+        });
+    };
 
     /*------------------------------------------------
      Magnificpopup for video gallery section
@@ -112,6 +136,79 @@
         $(this).toggleClass('is-active');
         $(this).next().toggleClass('nav-show')
     });
+
+    // Testimonial slider
+    $('.testimonial-wrapper').slick({
+        autoplay: true,
+        dots: false,
+        infinite: true,
+        fade: true,
+        speed: 300,
+        slidesToShow: 1,
+        adaptiveHeight: false,
+        arrows: true,
+    });
+
+    // Single Portfolio slider
+    $('.portfolio-wrapper').slick({
+        autoplay: true,
+        dots: true,
+        infinite: true,
+        fade: true,
+        speed: 300,
+        slidesToShow: 1,
+        adaptiveHeight: false,
+        arrows: true,
+    });
+
+    // Single Blog Post slider
+    $('.blog-post-wrapper').slick({
+        autoplay: true,
+        dots: true,
+        infinite: true,
+        fade: true,
+        speed: 300,
+        slidesToShow: 1,
+        adaptiveHeight: false,
+        arrows: true,
+    });
+
+    // Brand logo slider
+    $('.brand-logo-slider').slick({
+        dots: false,
+        arrows: false,
+        slidesToShow: 5,
+        infinite: true,
+        speed: 300,
+        adaptiveHeight: false,
+        responsive: [
+            { breakpoint: 991, settings: { slidesToShow: 3 } },
+            { breakpoint: 767, settings: { slidesToShow: 3 } },
+            { breakpoint: 481, settings: { slidesToShow: 2 } },
+            { breakpoint: 321, settings: { slidesToShow: 1 } },
+        ]
+    });
+
+    // Paralax activation
+    $.stellar({
+        responsive: true,
+        scrollProperty: 'scroll',
+        parallaxElements: false,
+        horizontalScrolling: false,
+        horizontalOffset: 0,
+        verticalOffset: 0
+    });
+
+    // Instagram Feed JS activation
+    var userFeed = new Instafeed({
+        get: 'user',
+        limit: '6',
+        userId: '4713066548',
+        accessToken: '4713066548.8d3ef49.6942ccf6893b404185d88e24f7d56229',
+        template: '<a href="{{link}}" target="_blank" id="{{id}}"><img src="{{image}}" /></a>'
+    });
+    userFeed.run();
+
     
 
 
