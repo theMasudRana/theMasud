@@ -1,11 +1,11 @@
 (function($) {
     'use strict';
 
-    $('#menu-trigger-id').on('click', function(e) {
-        var $this = $(this);
-        $this.toggleClass('active');
-        e.preventDefault();
-    });
+    // $('#menu-trigger-id').on('click', function(e) {
+    //     var $this = $(this);
+    //     $this.toggleClass('active');
+    //     e.preventDefault();
+    // });
     var wow = new WOW({
         boxClass: 'wow', // animated element css class (default is wow)
         animateClass: 'animated', // animation css class (default is animated)
@@ -15,7 +15,7 @@
     });
     wow.init();
 
-     $('.slider-area').slick({
+     $('.slider-navigation').slick({
         dots: true,
         arrows: false,
         autoPlay: true,
@@ -129,14 +129,6 @@
         fixedContentPos: false
     });
 
-    /* ---------------------------------------------
-     MENU HAMBURGER FOR MENU
-    --------------------------------------------- */
-    $('.hamburger').on('click', function() {
-        $(this).toggleClass('is-active');
-        $(this).next().toggleClass('nav-show')
-    });
-
     // Testimonial slider
     $('.testimonial-wrapper').slick({
         autoplay: true,
@@ -199,17 +191,64 @@
         verticalOffset: 0
     });
 
-    // Instagram Feed JS activation
-    var userFeed = new Instafeed({
-        get: 'user',
-        limit: '6',
-        userId: '4713066548',
-        accessToken: '4713066548.8d3ef49.6942ccf6893b404185d88e24f7d56229',
-        template: '<a href="{{link}}" target="_blank" id="{{id}}"><img src="{{image}}" /></a>'
+    //Scroll to bottom
+    $(".scroll-btn").on('click', function() {
+        $('html,body').animate({
+                scrollTop: $("#about").offset().top
+            },
+            'slow');
     });
-    userFeed.run();
 
-    
+
+    /* ---------------------------------------------
+     Header sticky style.
+    --------------------------------------------- */
+    $(window).on('scroll', function() {
+        if ($('.navbar').offset().top > 50) {
+            $('.navbar-fixed-top').addClass('top-nav-collapse');
+        } else {
+            $('.navbar-fixed-top').removeClass('top-nav-collapse');
+        }
+    });
+    /*-------------------------------------------
+     Menu show hide 
+    ---------------------------------------------*/
+    $('.menu-toggle-btn').on('click', function() {
+        $(this).toggleClass('is-active');
+    });
+    $('.menu-toggle-btn').on('click', function() {
+        $('.menu-section').toggleClass('show-win');
+        $(this).toggleClass('btn-open').toggleClass('btn-close');
+    });
+
+    $('.menu-section').on('click', function() {
+        $('.menu-button').fadeToggle(300);
+        $('.button a').toggleClass('btn-open').toggleClass('btn-close');
+        open = false;
+    });
+    /*-----------------------------------------------------------
+       jQuery for page scrolling
+    -------------------------------------------------------------*/
+    $('a.page-scroll').on('click', function(event) {
+        var $anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $($anchor.attr('href')).offset().top
+        }, 1000, 'easeInOutExpo');
+        event.preventDefault();
+    });
+
+    $("a.page-scroll").on('click', function() {
+        $('.menu-section').removeClass('show-win');
+        $('.menu-toggle-btn').removeClass('is-active');
+    });
+
+    /* -------------------------------------------------------
+        Menu active class changer
+    ----------------------------------------------------------*/
+    $('.main-menu ul li').on('click', function(event) {
+        $(this).siblings('.active').removeClass('active');
+        $(this).addClass('active');
+    });
 
 
 })(jQuery)
