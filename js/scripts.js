@@ -15,19 +15,6 @@
     });
     wow.init();
 
-     $('.slider-navigation').slick({
-        dots: true,
-        arrows: false,
-        autoPlay: true,
-        speed: 500,
-        autoPlaySpeed: 3000,
-        infinite: true,
-        fade: true,
-        easing: 'linear',
-        slidesToShow: 1,
-        slidesToScroll: 1
-    });
-
     // Portfolio section 
     $('.portfolio-section').imagesLoaded(function() {
         // Portfolio activation
@@ -63,32 +50,6 @@
 
     // Counetrup
     $('.counter').counterUp();
-
-    /*-------------------------------------------
-      SCROLL TO TOP BUTTON
-    ---------------------------------------------*/
-    $('body').append('<a id="back-to-top" class="to-top-btn" href="#"><i class="fa fa-angle-up"></i></a>');
-    if ($('#back-to-top').length) {
-        var scrollTrigger = 100, // px
-            backToTop = function() {
-                var scrollTop = $(window).scrollTop();
-                if (scrollTop > scrollTrigger) {
-                    $('#back-to-top').addClass('to-top-show');
-                } else {
-                    $('#back-to-top').removeClass('to-top-show');
-                }
-            };
-        backToTop();
-        $(window).on('scroll', function() {
-            backToTop();
-        });
-        $('#back-to-top').on('click', function(e) {
-            e.preventDefault();
-            $('html,body').animate({
-                scrollTop: 0
-            }, 1250);
-        });
-    };
 
     /*------------------------------------------------
      Magnificpopup for video gallery section
@@ -127,6 +88,29 @@
         removalDelay: 160,
         preloader: false,
         fixedContentPos: false
+    });
+
+    /*------------------------------------------------
+     Magnificpopup for about section
+    -------------------------------------------------- */
+    $('.about-icon').magnificPopup({
+        type: 'image',
+        removalDelay: 300,
+        mainClass: 'mfp-fade',
+    });
+
+    // Slider
+    $('.slider-navigation').slick({
+        dots: true,
+        arrows: false,
+        autoPlay: true,
+        speed: 500,
+        autoPlaySpeed: 3000,
+        infinite: true,
+        fade: true,
+        easing: 'linear',
+        slidesToShow: 1,
+        slidesToScroll: 1
     });
 
     // Testimonial slider
@@ -174,10 +158,10 @@
         speed: 300,
         adaptiveHeight: false,
         responsive: [
-            { breakpoint: 991, settings: { slidesToShow: 3 } },
+            { breakpoint: 991, settings: { slidesToShow: 4 } },
             { breakpoint: 767, settings: { slidesToShow: 3 } },
             { breakpoint: 481, settings: { slidesToShow: 2 } },
-            { breakpoint: 321, settings: { slidesToShow: 1 } },
+            { breakpoint: 321, settings: { slidesToShow: 2 } },
         ]
     });
 
@@ -249,6 +233,32 @@
         $(this).siblings('.active').removeClass('active');
         $(this).addClass('active');
     });
+
+    /*-------------------------------------------
+      SCROLL TO TOP BUTTON
+    ---------------------------------------------*/
+    $('body').append('<a id="back-to-top" class="to-top-btn" href="#"><i class="fa fa-angle-up"></i></a>');
+    if ($('#back-to-top').length) {
+        var scrollTrigger = 100, // px
+            backToTop = function() {
+                var scrollTop = $(window).scrollTop();
+                if (scrollTop > scrollTrigger) {
+                    $('#back-to-top').addClass('to-top-show');
+                } else {
+                    $('#back-to-top').removeClass('to-top-show');
+                }
+            };
+        backToTop();
+        $(window).on('scroll', function() {
+            backToTop();
+        });
+        $('#back-to-top').on('click', function(e) {
+            e.preventDefault();
+            $('html,body').animate({
+                scrollTop: 0
+            }, 1250);
+        });
+    };
 
 
 })(jQuery)
