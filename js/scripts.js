@@ -135,6 +135,11 @@
         slidesToShow: 1,
         adaptiveHeight: false,
         arrows: true,
+        responsive: [
+            {
+                breakpoint: 767, settings: { dots: false }
+            }
+        ]
     });
 
     // Single Blog Post slider
@@ -147,6 +152,11 @@
         slidesToShow: 1,
         adaptiveHeight: false,
         arrows: true,
+        responsive: [
+            {
+                breakpoint: 767, settings: { dots: false }
+            }
+        ]
     });
 
     // Brand logo slider

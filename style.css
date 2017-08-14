@@ -837,7 +837,7 @@ mark {
 }
 
 .breadcrumb-list li::before {
-  color: #d9bf77;
+  color: #ffce3e;
   content: "/";
   left: -15px;
   position: absolute;
@@ -855,7 +855,7 @@ mark {
 }
 
 .breadcrumb-list li a:hover {
-    color: #D9BF77;
+    color: #ffce3e;
 }
 
 
@@ -912,7 +912,9 @@ mark {
 /*--------------------------------------------------------
   10. PROGRESS BAR STYLE
 ---------------------------------------------------------*/
-
+.skill-section {
+  overflow: hidden;
+}
 .single-skill-bar {
     overflow: hidden;
     padding: 10px 0 0;
@@ -1057,17 +1059,17 @@ mark {
     opacity: 1;
     transform: translateY(-50%);
 }
-.about-content h6 {
+.about-content-wrapper h6 {
     color: #999;
 }
-.about-content > h3 {
+.about-content-wrapper > h3 {
   margin-bottom: 20px;
   text-transform: uppercase;
 }
-.about-content p {
+.about-content-wrapper p {
     color: #232323;
 }
-.about-content p + p {
+.about-content-wrapper p + p {
     margin-bottom: 0;
 }
 .follow-title {
@@ -1306,24 +1308,27 @@ mark {
 .project-cat>li {
     display: inline-block;
     line-height: 1;
-    margin-right: 10px;
+    padding-right: 7px;
+    margin-right: 3px;
     position: relative;
+}
+
+.project-cat li::before {
+  color: #ffce3e;
+  content: ",";
+  font-size: 24px;
+  position: absolute;
+  right: 0;
+  top: -7px;
+}
+.project-cat li:last-child::before {
+  display: none;
 }
 
 .project-cat>li a {
     color: #fff;
     display: inline-block;
     line-height: 1;
-}
-
-.project-cat>li::before {
-    content: ",";
-    position: absolute;
-    right: -9px;
-}
-
-.project-cat>li:last-child::before {
-    content: "";
 }
 
 .project-cat>li:last-child {
@@ -1382,7 +1387,7 @@ mark {
 .single-information a {
     text-decoration: underline;
     font-weight: 400;
-    color: #D9BF77;
+    color: #ffce3e;
 }
 
 .single-information a:hover {
@@ -1397,7 +1402,6 @@ mark {
 
 .single-information i {
     padding-right: 7px;
-    color: #666;
 }
 .information-description p {
     margin-bottom: 0;
@@ -1410,15 +1414,15 @@ mark {
   font-style: italic;
   font-weight: 500;
   margin: 30px 0 30px 15px;
-  padding: 40px 30px 40px 20px;
+  padding: 40px 20px 40px 20px;
   border-left: 4px solid #ffce3e; 
 }
-
+.post-full-width .information-description blockquote {
+  padding: 40px 20px;
+}
 .information-description blockquote p {
   position: relative;
   padding-left: 20px;
-  padding-bottom: 10px;
-  padding-right: 10px;
 }
 .information-description blockquote p::before{
   content: "“";
@@ -1544,12 +1548,23 @@ mark {
 .related-cat li {
     float: left;
     margin-right: 10px;
-    padding-right: 2px;
+    padding-right: 7px;
     line-height: 1;
     position: relative;
     opacity: 0;
     transform: translateY(100%);
     transition: all 0.5s ease-out 0.2s;
+}
+.related-cat li::before {
+  color: #ffce3e;
+  content: ",";
+  font-size: 24px;
+  position: absolute;
+  right: 0;
+  top: -7px;
+}
+.related-cat li:last-child::before {
+  display: none;
 }
 .related-project:hover .related-cat li {
   opacity: 1;
@@ -1819,9 +1834,6 @@ mark {
     margin-right: 20px;
     padding-left: 1px;
 }
-.single-blog-post .post-info li a {
-    color: #333;
-}
 .single-blog-post .post-info li a i {
     padding-right: 7px;
 }
@@ -1855,11 +1867,13 @@ mark {
 .post-title-list li {
   color: #626262 ;
   position: relative;
-  margin-bottom: 6px;
   padding-left: 18px;
   font-size: 16px;
   font-style: oblique;
   font-weight: 400;
+}
+.post-title-list li + li {
+  margin-top: 7px;
 }
 .post-title-list li::before {
   background: #ffce3e;
@@ -1992,6 +2006,9 @@ mark {
   overflow: hidden;
   margin-top: 30px;
 }
+.post-admin {
+  overflow: hidden;
+}
 .post-share span {
     float: right;
     font-size: 12px;
@@ -2005,13 +2022,16 @@ mark {
   color: #232323;
 }
 .post-share span a:hover {
-  color: #d9bf77;
+  color: #ffce3e;
 }
 .social-menu.post-social {
     float: left;
 }
 .social-menu.post-social li {
-    margin: 0 20px 0 0;
+  margin: 0;
+}
+.social-menu.post-social li + li {
+    margin: 0 0 0 20px;
 }
 .search-form {
     position: relative;
@@ -2091,7 +2111,7 @@ mark {
   margin-bottom: 7px;
 }
 .post-widget-content h5 a:hover {
-    color: #D9BF77;
+    color: #ffce3e;
 }
 .post-widget-content span {
   font-size: 10px;
@@ -2106,7 +2126,7 @@ mark {
     color: #232323;
 }
 .post-widget-content span a:hover {
-    color: #D9BF77;
+    color: #ffce3e;
 }
 .tags a {
     color: #232323;
