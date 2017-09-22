@@ -1,11 +1,6 @@
 (function($) {
     'use strict';
 
-    // $('#menu-trigger-id').on('click', function(e) {
-    //     var $this = $(this);
-    //     $this.toggleClass('active');
-    //     e.preventDefault();
-    // });
     var wow = new WOW({
         boxClass: 'wow', // animated element css class (default is wow)
         animateClass: 'animated', // animation css class (default is animated)
@@ -49,7 +44,10 @@
     });
 
     // Counetrup
-    $('.counter').counterUp();
+    $('.counter').counterUp({
+        delay: 10,
+        time: 1000
+    });
 
     /*------------------------------------------------
      Magnificpopup for video gallery section
@@ -135,11 +133,10 @@
         slidesToShow: 1,
         adaptiveHeight: false,
         arrows: true,
-        responsive: [
-            {
-                breakpoint: 767, settings: { dots: false }
-            }
-        ]
+        responsive: [{
+            breakpoint: 767,
+            settings: { dots: false }
+        }]
     });
 
     // Single Blog Post slider
@@ -152,11 +149,10 @@
         slidesToShow: 1,
         adaptiveHeight: false,
         arrows: true,
-        responsive: [
-            {
-                breakpoint: 767, settings: { dots: false }
-            }
-        ]
+        responsive: [{
+            breakpoint: 767,
+            settings: { dots: false }
+        }]
     });
 
     // Brand logo slider
@@ -226,7 +222,7 @@
     $('a.page-scroll').on('click', function(event) {
         var $anchor = $(this);
         $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
+            scrollTop: ($($anchor.attr('href')).offset().top - 58)
         }, 1000, 'easeInOutExpo');
         event.preventDefault();
     });

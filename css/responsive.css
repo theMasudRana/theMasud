@@ -44,6 +44,9 @@
 .slider-content-2 h1 {
   font-size: 90px;
 }
+.breadcrumb-section {
+  padding: 200px 0 130px;
+}
 .template-section {
 	padding: 90px 0;
 }
@@ -58,7 +61,7 @@
   margin-top: 8px;
 }
 .area-heading {
-  margin: 0 auto 90px;
+  margin: 0 auto 80px;
   width: 70%;
 }
 .skill-bar-area {
@@ -73,9 +76,6 @@
 .block-image img {
   width: 70%;
 }
-.about-content-wrapper {
-  margin-top: 30px;
-}
 .portfolio-information h4 {
   font-size: 20px;
   margin: 0;
@@ -85,6 +85,12 @@
 }
 .video-section {
 	padding: 170px 0;
+}
+.slick-dots li button::before {
+  font-size: 12px;
+}
+.post-description > h2 {
+  font-size: 28px;
 }
 .post-heading {
   padding: 18px 15px;
@@ -101,8 +107,15 @@
 .post-description-inner {
   margin: 20px 0 0;
 }
+.post-full-width .post-description-inner {
+  margin-bottom: 15px;
+}
 .related-blog-post {
   margin-top: 30px;
+}
+.comment-title {
+  margin-bottom: 25px;
+  padding-bottom: 10px;
 }
 .single-widget:nth-child(n+2) {
   margin-top: 30px;
@@ -166,6 +179,9 @@
 .main-menu.main-menu-wrapper {
   margin-top: 20px;
 }
+.breadcrumb-section {
+  padding: 190px 0 120px;
+}
 .sliding-text-box {
   margin-top: 30px;
 }
@@ -179,7 +195,7 @@
   padding: 60px 0;
 }
 .area-heading {
-  margin: 0 auto 80px;
+  margin: 0 auto 70px;
   width: 80%;
 }
 .area-title {
@@ -228,6 +244,7 @@
   height: 45px;
   line-height: 47px;
   width: 45px;
+  font-size: 18px;
 }
 .related-content h4 {
   font-size: 20px;
@@ -236,7 +253,10 @@
   font-size: 13px;
 }
 .counter-section .col-sm-6:nth-child(n+3) .single-counter {
-	margin-top: 30px;
+	margin-top: 40px;
+}
+.counter-icon {
+  margin-bottom: 20px;
 }
 .counter-icon i {
 	font-size: 42px;
@@ -249,19 +269,34 @@
 	font-size: 18px;
 }
 .single-price-table {
-	width: 50%;
+	width: 47%;
 }
-.single-price-table:last-child {
+.single-price-table:nth-child(2) {
 	display: none;
+}
+.single-price-table {
+  margin: 0 10px;
 }
 .pricing-content-heading {
   padding: 0 0 20px;
 }
+.pricing-features li:nth-child(n+5) {
+  display: none;
+}
 .video-section {
 	padding: 150px 0;
 }
+.video-play-icon {
+  font-size: 42px;
+  height: 80px;
+  width: 80px;
+  line-height: 80px;
+}
+.slick-dots li button::before {
+  font-size: 12px;
+}
 .post-description > h2 {
-  font-size: 28px;
+  font-size: 26px;
 }
 .single-blog-post .post-info li {
   padding-top: 1px;
@@ -273,7 +308,14 @@
   font-size: 20px;
 }
 .information-description blockquote {
-  padding: 35px 20px;
+  padding: 30px 20px;
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.comment-title {
+  margin-bottom: 25px;
+  padding-bottom: 10px;
 }
 .testimonial-wrapper:hover .slick-next {
     right: -12px;
@@ -359,7 +401,8 @@ textarea.message-control {
 .mobile-heading {
   display: block;
 }
-.slider-content-2 .mobile-heading {
+.slider-content-2 .mobile-heading,
+.slider-content-3 .mobile-heading {
   color: #fff;
 }
 .mobile-heading span {
@@ -396,23 +439,28 @@ textarea.message-control {
   margin-top: 10px;
 }
 .breadcrumb-section {
-  padding: 220px 0 140px
+  padding: 170px 0 100px;
 }
 .breadcrumb-content {
   text-align: center;
 }
 .breadcrumb-title {
-  font-size: 18px;
+  font-size: 22px;
   line-height: 26px;
 }
 .breadcrumb-list {
+  margin-top: 10px;
   float: none;
   text-align: center;
 }
 .breadcrumb-list li {
   float: none;
   display: inline;
-  font-size: 12px;
+  font-size: 13px;
+  margin: 0 10px;
+}
+.breadcrumb-list li::before {
+  top: 0;
 }
 .breadcrumb-list li a {
   display: inline-block;
@@ -452,6 +500,20 @@ textarea.message-control {
 .area-title {
   font-size: 24px;
 }
+.about-icon {
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+}
+.about-heading  h3 {
+  font-size: 22px;
+}
+.follow-title {
+  font-size: 18px;
+}
+.follow-menu li a {
+  font-size: 14px;
+}
 .about-content-wrapper {
   margin-top: 30px;
 }
@@ -478,7 +540,7 @@ textarea.message-control {
     width: 100%;
 }
 .project-action-btn a {
-  font-size: 18px;
+  font-size: 16px;
   height: 40px;
   line-height: 40px;
   width: 40px;
@@ -508,20 +570,33 @@ textarea.message-control {
 .pagination-area {
   margin-top: 10px;
 }
+.counter-bg-2.template-section-2 .single-counter {
+  padding: 30px 0;
+}
 .counter-section .col-md-3:nth-child(n+2) .single-counter {
   margin-top: 40px;
 }
 .counter-icon {
   margin-bottom: 20px;
 }
+.counter-icon i {
+  font-size: 42px;
+}
 .counter-content p {
   margin-bottom: 15px;
+  font-size: 32px;
+}
+.counter-content h3 {
+  font-size: 18px;
 }
 .single-price-table {
   width: 100%;
 }
 .single-price-table:nth-of-type(n+2) {
   margin-top: 30px;
+}
+.single-price-table {
+  border-radius: 10px;
 }
 .pricing-value {
   margin-bottom: 20px;
@@ -537,6 +612,12 @@ textarea.message-control {
 }
 .video-section {
   padding: 120px 0;
+}
+.video-play-icon {
+  font-size: 36px;
+  height: 70px;
+  width: 70px;
+  line-height: 70px;
 }
 .col-md-4:nth-child(n+2) .blog-post {
   margin-top: 30px;
@@ -575,7 +656,7 @@ textarea.message-control {
   font-size: 14px;
 }
 .information-description blockquote {
-  font-size: 16px;
+  font-size: 14px;
   margin: 20px 0 20px 10px;
   padding: 30px 20px 30px 15px;
 }
@@ -640,7 +721,7 @@ textarea.message-control {
 .comment-title {
   font-size: 20px;
   margin-bottom: 20px;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
 }
 .related-blog-post .col-sm-6:nth-child(n+2) .blog-post {
   margin-top: 30px;
@@ -653,7 +734,7 @@ textarea.message-control {
 }
 .call-to-action-content h3 {
   font-size: 20px;
-  line-height: 28px;
+  line-height: 26px;
 }
 .testimonial-wrapper blockquote {
   padding: 0 20px;
@@ -691,6 +772,9 @@ textarea.message-control {
 }
 #bolt-contact-form .form-group:nth-of-type(n+2) {
   margin-top: 20px;
+}
+#bolt-contact-form .button {
+  padding: 0 20px;
 }
 textarea.message-control {
   margin-bottom: 20px;
