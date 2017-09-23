@@ -424,9 +424,12 @@ mark {
 
 .menu-toggle-btn {
   background: #ffce3e none repeat scroll 0 0;
+  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.1);
+  color: #fff;
   cursor: pointer;
+  font-size: 20px;
   height: 60px;
-  line-height: 65px;
+  line-height: 60px;
   padding: 0;
   position: absolute;
   right: 0;
@@ -435,24 +438,8 @@ mark {
   transform: translateY(-50%);
   width: 60px;
 }
-
 .menu-logo-area {
-    position: relative;
-}
-
-.nav.navbar-nav.hover-style-one {
-    margin-right: 60px;
-}
-
-.nav.navbar-nav.hover-style-one {
-    opacity: 0;
-    transition: all 0.5s ease-in-out 0s;
-    visibility: hidden;
-}
-
-.nav-show .nav.navbar-nav.hover-style-one {
-    opacity: 1;
-    visibility: visible;
+  position: relative;
 }
 
 .menu-section {
@@ -485,9 +472,24 @@ mark {
   padding: 10px 35px;
 }
 
+.close-btn {
+  background: #ffce3e none repeat scroll 0 0;
+  border-radius: 50%;
+  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  color: #fff;
+  font-size: 18px;
+  height: 60px;
+  line-height: 60px;
+  position: absolute;
+  right: 40px;
+  top: 40px;
+  width: 60px;
+}
+
 .main-menu.main-menu-wrapper {
   opacity: 0;
-  transition: all 0.3s ease 0.2s;
+  transition: all 0.3s ease-in-out 0s;
   visibility: hidden;
   margin-top: 50px;
 }
@@ -605,26 +607,10 @@ mark {
 }
 .header-area .header-style-2.navbar.top-nav-collapse {
   background: #000 none repeat scroll 0 0;
-  padding: 10px 30px;
+  padding: 5px 30px;
 }
 .header-style-2 .logo {
     color: #ffffff;
-}
-.header-style-2 .hamburger-inner,
-.header-style-2 .hamburger-inner::before,
-.header-style-2 .hamburger-inner::after {
-    background: #ffffff;
-}
-.header-style-2 .is-active .hamburger-inner,
-.header-style-2 .is-active .hamburger-inner::before,
-.header-style-2 .is-active .hamburger-inner::after {
-    background: #fff;
-}
-.hamburger-inner::before {
-  top: -8px;
-}
-.hamburger--collapse .hamburger-inner::after {
-  top: -16px;
 }
 
 /*Slider section */
@@ -783,7 +769,12 @@ mark {
 .slider-area-2 .cd-headline.clip span {
   color: #fff;
 }
-
+.slider-3 .bookmark-list {
+  margin-bottom: 25px;
+}
+.slider-area-2 .slider-content h1 {
+  font-size: 60px;
+}
 
 /*Breadcrumb area style*/
 .breadcrumb-section {

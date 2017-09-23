@@ -203,10 +203,7 @@
     /*-------------------------------------------
      Menu show hide 
     ---------------------------------------------*/
-    $('.menu-toggle-btn').on('click', function() {
-        $(this).toggleClass('is-active');
-    });
-    $('.menu-toggle-btn').on('click', function() {
+    $('.menu-toggle-btn, .close-btn').on('click', function() {
         $('.menu-section').toggleClass('show-win');
         $(this).toggleClass('btn-open').toggleClass('btn-close');
     });
