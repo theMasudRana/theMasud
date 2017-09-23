@@ -5097,39 +5097,32 @@ WOW.css
     src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('../fonts/slick.woff') format('woff'), url('../fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
 }
 /* Arrows */
-.slick-prev,
-.slick-next
-{
-    font-size: 0;
-    line-height: 0;
-
-    position: absolute;
-    top: 50%;
-
-    display: block;
-
-    width: 20px;
-    height: 20px;
-    padding: 0;
-    -webkit-transform: translate(0, -50%);
-    -ms-transform: translate(0, -50%);
-    transform: translate(0, -50%);
-
-    cursor: pointer;
-
-    color: transparent;
-    border: none;
-    outline: none;
-    background: transparent;
+.slick-prev, 
+.slick-next {
+  background: #fff none repeat scroll 0 0;
+  border: medium none;
+  border-radius: 100%;
+  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.1);
+  color: transparent;
+  cursor: pointer;
+  display: block;
+  font-size: 0;
+  height: 50px;
+  line-height: 0;
+  outline: medium none;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(0px, -50%);
+  width: 50px;
 }
-.slick-prev:hover,
-.slick-prev:focus,
-.slick-next:hover,
-.slick-next:focus
-{
-    color: transparent;
-    outline: none;
-    background: transparent;
+.slick-prev:hover, 
+.slick-prev:focus, 
+.slick-next:hover, 
+.slick-next:focus {
+  background: #ffd600 none repeat scroll 0 0;
+  color: #fff;
+  outline: medium none;
 }
 .slick-prev:hover:before,
 .slick-prev:focus:before,
@@ -5144,18 +5137,13 @@ WOW.css
     opacity: .25;
 }
 
-.slick-prev:before,
-.slick-next:before
-{
-    font-family: 'bicon';
-    font-size: 20px;
-    line-height: 1;
-
-    opacity: .75;
-    color: white;
-
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+.slick-prev::before, 
+.slick-next::before {
+  color: #232323;
+  font-family: fontawesome;
+  font-size: 20px;
+  line-height: 1;
+  opacity: 0.75;
 }
 
 .slick-prev
@@ -5167,9 +5155,8 @@ WOW.css
     right: -25px;
     left: auto;
 }
-.slick-prev:before
-{
-    content: '←';
+.slick-prev::before {
+  content: "";
 }
 [dir='rtl'] .slick-prev:before
 {
@@ -5185,9 +5172,8 @@ WOW.css
     right: auto;
     left: -25px;
 }
-.slick-next:before
-{
-    content: '→';
+.slick-next::before {
+  content: "";
 }
 [dir='rtl'] .slick-next:before
 {

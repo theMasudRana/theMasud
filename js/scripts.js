@@ -98,7 +98,8 @@
     });
 
     // Slider
-    $('.slider-navigation').slick({
+    var mainSlider = $('.slider-navigation');
+    mainSlider.slick({
         dots: true,
         arrows: false,
         autoPlay: true,
@@ -112,8 +113,9 @@
     });
 
     // Testimonial slider
-    $('.testimonial-wrapper').slick({
-        autoplay: true,
+    var testimonialCarousel = $('.testimonial-wrapper');
+    testimonialCarousel.slick({
+        autoplay: false,
         dots: false,
         infinite: true,
         fade: true,
@@ -124,7 +126,8 @@
     });
 
     // Single Portfolio slider
-    $('.portfolio-wrapper').slick({
+    var singlePortfolioSlider = $('.portfolio-wrapper');
+    singlePortfolioSlider.slick({
         autoplay: true,
         dots: true,
         infinite: true,
@@ -140,7 +143,8 @@
     });
 
     // Single Blog Post slider
-    $('.blog-post-wrapper').slick({
+    var singlePostSlider = $('.blog-post-wrapper');
+    singlePostSlider.slick({
         autoplay: true,
         dots: true,
         infinite: true,
@@ -156,7 +160,8 @@
     });
 
     // Brand logo slider
-    $('.brand-logo-slider').slick({
+    var brandLogoSlider = $('.brand-logo-slider');
+    brandLogoSlider.slick({
         dots: false,
         arrows: false,
         slidesToShow: 5,
