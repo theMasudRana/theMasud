@@ -189,9 +189,8 @@
     //Scroll to bottom
     $(".scroll-btn").on('click', function() {
         $('html,body').animate({
-                scrollTop: $("#about").offset().top
-            },
-            'slow');
+                scrollTop: ($("#about").offset().top - 58)
+            }, 1000, 'easeInOutExpo');
     });
 
 
