@@ -126,10 +126,10 @@
     });
 
     // Single Portfolio slider
-    var singlePortfolioSlider = $('.portfolio-wrapper');
+    var singlePortfolioSlider = $('.single-project-slider');
     singlePortfolioSlider.slick({
         autoplay: true,
-        dots: true,
+        dots: false,
         infinite: true,
         fade: true,
         speed: 300,
@@ -146,7 +146,7 @@
     var singlePostSlider = $('.blog-post-wrapper');
     singlePostSlider.slick({
         autoplay: true,
-        dots: true,
+        dots: false,
         infinite: true,
         fade: true,
         speed: 300,
