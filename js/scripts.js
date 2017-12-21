@@ -189,21 +189,25 @@
     //Scroll to bottom
     $(".scroll-btn").on('click', function() {
         $('html,body').animate({
-                scrollTop: ($("#about").offset().top - 58)
-            }, 1000, 'easeInOutExpo');
+            scrollTop: ($("#about").offset().top - 58)
+        }, 1000, 'easeInOutExpo');
     });
 
 
     /* ---------------------------------------------
      Header sticky style.
     --------------------------------------------- */
-    $(window).on('scroll', function() {
-        if ($('.navbar').offset().top > 50) {
-            $('.navbar-fixed-top').addClass('top-nav-collapse');
-        } else {
-            $('.navbar-fixed-top').removeClass('top-nav-collapse');
-        }
-    });
+    if ($('.navbar-fixed-top').length != 0) {
+        $(window).on('scroll', function() {
+
+
+            if ($('.navbar').offset().top > 50) {
+                $('.navbar-fixed-top').addClass('top-nav-collapse');
+            } else {
+                $('.navbar-fixed-top').removeClass('top-nav-collapse');
+            }
+        });
+    }
     /*-------------------------------------------
      Menu show hide 
     ---------------------------------------------*/
