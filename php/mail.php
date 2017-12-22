@@ -9,7 +9,7 @@
 		$from = stripslashes($_POST['name'])."<".stripslashes($_POST['email']).">";
 
 		// Recipient Email Address 
-		$to = 'mr.masudrana00@gmail.com'; 
+		$to = 'envato@cxwebexperts.com'; 
 
 		// Email Header 
 		$headers = "From: $from\r\n" .
@@ -19,7 +19,7 @@
 		$body = "Name: $name\nEmail: $email\nSubject: $subject\nMessage:\n$message";
  		
  		// Check that data was sent to the mailer.
-		if ( empty($name) OR empty($phone) OR empty($subject) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+		if ( empty($name) OR empty($subject) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
 			echo 'Please fill all the fields and try again.';
 			exit;
 		}

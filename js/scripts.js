@@ -355,9 +355,9 @@
 
             var contentString = '<div id="map-content">' +
                 '<div id="bodyContent">' +
-                '<p> <span class="map-info-icon"><i class="fa fa-map-o"></i></span> <span class="map-info-content">1 Hacker Way, Menlo park ' +
+                '<p class="text-center"> <span class="map-info-icon"><i class="fa fa-map-o"></i></span> <span class="map-info-content">10 Main Street, STD park ' +
                 ' New York City, USA </span></p> ' +
-                '<p> <span class="map-info-icon"><i class="fa fa-phone"></i></span> <span> +880044 545 989 626</span> </p> ' +
+                '<p class="text-center"><span class="map-info-icon"><i class="fa fa-phone"></i></span> <span> +8801 234 567 89</span> </p> ' +
                 '</div>' +
                 '</div>';
 

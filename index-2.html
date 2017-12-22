@@ -821,13 +821,13 @@
                                     <h3>stay with me</h3>
                                 </div>
                                 <div class="row">
-                                    <form action="#" id="bolt-contact-form">
+                                    <form action="php/mail.php" method="post" id="bolt-contact-form">
                                         <div class="col-md-5 col-sm-6">
                                             <div class="form-group">
-                                                <input type="text" class="message-control" name="name" placeholder="Your Name">
+                                                <input type="text" class="message-control" name="name" placeholder="Your name">
                                             </div>
                                             <div class="form-group">
-                                                <input type="text" class="message-control" name="email" placeholder="Your Email">
+                                                <input type="text" class="message-control" name="email" placeholder="Your email">
                                             </div>
                                             <div class="form-group">
                                                 <input type="text" class="message-control" name="subject" placeholder="Subject">
@@ -837,7 +837,7 @@
                                             <div class="form-group">
                                                 <textarea class="message-control" name="message" placeholder="Write Message" rows="3"></textarea>
                                             </div>
-                                            <a href="#" class="button">send message</a>
+                                            <button type="submit" class="button">Send message</button>
                                             <p class="contact-send-message"></p>
                                         </div>
                                     </form>
