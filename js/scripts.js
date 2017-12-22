@@ -2,15 +2,17 @@
     'use strict';
 
     var wow = new WOW({
-        boxClass: 'wow', // animated element css class (default is wow)
-        animateClass: 'animated', // animation css class (default is animated)
-        offset: 0, // distance to the element when triggering the animation (default is 0)
-        mobile: true, // trigger animations on mobile devices (default is true)
-        live: true, // act on asynchronously loaded content (default is true)
+        boxClass: 'wow',
+        animateClass: 'animated',
+        offset: 0,
+        mobile: true,
+        live: true,
     });
     wow.init();
 
-    // Portfolio section 
+    /*--------------------------------------------------
+    PORTFOLIO ACTIVATION.
+    ---------------------------------------------------*/
     $('.portfolio-section').imagesLoaded(function() {
         // Portfolio activation
         var $grid = $('.portfolio-grid').isotope({
@@ -43,7 +45,9 @@
         });
     });
 
-    // Counetrup
+    /*--------------------------------------------------
+    Countdown Activation
+    ---------------------------------------------------*/
     $('.counter').counterUp({
         delay: 10,
         time: 1000
@@ -75,7 +79,6 @@
             }
         }
     });
-
     /*------------------------------------------------
      Magnificpopup for video gallery section
     -------------------------------------------------- */
@@ -89,7 +92,7 @@
     });
 
     /*------------------------------------------------
-     Magnificpopup for about section
+     Magnification for about section
     -------------------------------------------------- */
     $('.about-icon').magnificPopup({
         type: 'image',
@@ -197,10 +200,8 @@
     /* ---------------------------------------------
      Header sticky style.
     --------------------------------------------- */
-    if ($('.navbar-fixed-top').length != 0) {
+    if ($('.navbar-fixed-top').length !== 0) {
         $(window).on('scroll', function() {
-
-
             if ($('.navbar').offset().top > 50) {
                 $('.navbar-fixed-top').addClass('top-nav-collapse');
             } else {
@@ -245,6 +246,20 @@
         $(this).addClass('active');
     });
 
+    /* ---------------------------------------------
+        Instagram Feed JS activation
+    --------------------------------------------- */
+    if ($('#instafeed').length !== 0) {
+        var userFeed = new Instafeed({
+            get: 'user',
+            limit: '6',
+            userId: '4713066548',
+            accessToken: '4713066548.8d3ef49.6942ccf6893b404185d88e24f7d56229',
+            template: '<a href="{{link}}" target="_blank" id="{{id}}"><img src="{{image}}" /></a>'
+        });
+        userFeed.run();
+    }
+
     /*-------------------------------------------
       SCROLL TO TOP BUTTON
     ---------------------------------------------*/
@@ -271,5 +286,93 @@
         });
     };
 
+    /*-------------------------------------------
+      Bolt Contact Map Activation
+    ---------------------------------------------*/    
+    if ($('#bolt-map').length !== 0) {
+        // When the window has finished loading create our google map below
+        google.maps.event.addDomListener(window, 'load', init);
+
+        function init() {
+            // Basic options for a simple Google Map
+            // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+            var mapOptions = {
+                // How zoomed in you want the map to start at (always required)
+                zoom: 15,
+                scrollwheel: false,
+                // The latitude and longitude to center the map (always required)
+                center: new google.maps.LatLng(40.6700, -73.9400), // New York
+                // How you would like to style the map. 
+                // This is where you would paste any style found on Snazzy Maps.
+                styles: [{
+                    "stylers": [{
+                        "saturation": -100
+                    }]
+                }, {
+                    "featureType": "water",
+                    "elementType": "geometry.fill",
+                    "stylers": [{
+                        "color": "#0099dd"
+                    }]
+                }, {
+                    "elementType": "labels",
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
+                }, {
+                    "featureType": "poi.park",
+                    "elementType": "geometry.fill",
+                    "stylers": [{
+                        "color": "#aadd55"
+                    }]
+                }, {
+                    "featureType": "road.highway",
+                    "elementType": "labels",
+                    "stylers": [{
+                        "visibility": "on"
+                    }]
+                }, {
+                    "featureType": "road.arterial",
+                    "elementType": "labels.text",
+                    "stylers": [{
+                        "visibility": "on"
+                    }]
+                }, {
+                    "featureType": "road.local",
+                    "elementType": "labels.text",
+                    "stylers": [{
+                        "visibility": "on"
+                    }]
+                }, {}]
+            };
+
+            // Get the HTML DOM element that will contain your map 
+            // We are using a div with id="map" seen below in the <body>
+            var mapElement = document.getElementById('bolt-map');
+
+            // Create the Google Map using our element and options defined above
+            var map = new google.maps.Map(mapElement, mapOptions);
+
+            var contentString = '<div id="map-content">' +
+                '<div id="bodyContent">' +
+                '<p> <span class="map-info-icon"><i class="fa fa-map-o"></i></span> <span class="map-info-content">1 Hacker Way, Menlo park ' +
+                ' New York City, USA </span></p> ' +
+                '<p> <span class="map-info-icon"><i class="fa fa-phone"></i></span> <span> +880044 545 989 626</span> </p> ' +
+                '</div>' +
+                '</div>';
+
+            var infowindow = new google.maps.InfoWindow({
+                content: contentString
+            });
+
+            // Let's also add a marker while we're at it
+            var marker = new google.maps.Marker({
+                position: map.getCenter(),
+                map: map,
+                title: '1 Hacker Way, Menlo park, New York City, USA'
+            });
+            infowindow.open(map, marker);
+        }
+    }
 
 })(jQuery)
